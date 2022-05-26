@@ -25,3 +25,6 @@
   "homepage": "https://github.com/L3yeah/Progradistribuida#readme",
   "description": ""
 }
+
+//En este archivo se encuentran las dependencies, nombre autor, licencia y keywords
+//Todas las paqueterias se ponen en el package.json

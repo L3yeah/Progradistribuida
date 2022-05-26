@@ -38,18 +38,18 @@
          let mensajes = document.querySelector('ul')
 
 
-         form.addEventListener('submit',(e)=>{
-             e.preventDefault()
-             if(input.value){
-                 socket.emit('chat', input.value)
+         form.addEventListener('submit',(e)=>{ // e quiere decir evento, es parte de la sintaxis. //un formulario envia datos, lo que dice que es cuando le des click va a hacer tal cosa
+             e.preventDefault() //cuando se queda pausado 
+             if(input.value){ //los inputs tienen un valor (sintaxis) y en ese valor va a ir internament lo que escribes. 
+                 socket.emit('chat', input.value) //el socket le llego un msj y lo va a transmitir a todos.
                  input.value = ''
              }
          })
 
-         socket.on('chat', (msg)=>{
+         socket.on('chat', (msg)=>{ //que cuando este prendido el chat  va a hacer una variable (msg) y crear un elemento li
              let item = document.createElement('li')
              item.textContent = msg
-             mensajes.appendChild(item)
+             mensajes.appendChild(item) //appendchild es un metodo para crear un elemento hijo 
              window.scrollTo(0 ,document.body.scrollHeight)
          })
     </script>
